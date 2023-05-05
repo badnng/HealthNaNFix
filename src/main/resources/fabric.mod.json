@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "healthnanfix",
+  "version": "${version}",
+
+  "name": "HealthNaNFix Mod",
+  "description": "HealthNaNFix Mod | Kill NaN entity",
+  "authors": [
+    "MCTeamPotato",
+    "Awei"
+  ],
+  "contact": {
+    "homepage": "https://www.mcmod.cn/author/28061.html",
+    "sources": "https://www.mcmod.cn/author/28061.html"
+  },
+
+  "license": "GPLv3",
+  "icon": "assets/healthnanfix/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "team.teampotato.HealthNaNFix.HealthNaNFix",
+      "team.teampotato.HealthNaNFix.Event.HealthNaNFixEvent"
+    ]
+  },
+  "mixins": [
+    "healthnanfix.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.13.3",
+    "fabric": "*",
+    "minecraft": "~1.18.2",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
