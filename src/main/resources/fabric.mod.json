@@ -4,7 +4,7 @@
   "version": "${version}",
 
   "name": "HealthNaNFixReduce Mod",
-  "description": "HealthNaNFixReduce Mod | Kill NaN entity | Fix the Health Value is 'NaN' on Player's NBTData",
+  "description": "HealthNaNFixReduce Mod Can Kill NaN entity and Fix the Health Value is 'NaN' on Player's NBTData",
   "authors": [
     "MCTeamPotato",
     "Awei",
@@ -12,23 +12,21 @@
   ],
   "contact": {
     "homepage": "https://www.mcmod.cn/author/28061.html",
-    "sources": "https://www.mcmod.cn/author/28061.html"
+    "sources": "https://github.com/MCTeamPotato/HealthNaNFix"
   },
 
   "license": "GPLv3",
-  "icon": "assets/healthnanfix/icon.png",
-
-  "environment": "*",
+  "environment": "client",
   "entrypoints": {
     "main": [
       "team.teampotato.HealthNaNFix.HealthNaNFix",
       "team.teampotato.HealthNaNFix.Event.HealthNaNFixEvent"
     ]
   },
+
   "mixins": [
     "healthnanfix.mixins.json"
   ],
-
   "depends": {
     "fabricloader": ">=0.13.3",
     "fabric": "*",
@@ -37,5 +35,16 @@
   },
   "suggests": {
     "another-mod": "*"
+  },
+  
+  "custom": {
+    "modmenu": {
+      "update_checker": false,
+      "icon": "assets/healthnanfix/icon.png",
+      "links": {
+        "重制版源码": "https://github.com/badnng/HealthNaNFix",
+        "主页": "https://www.mcmod.cn/author/28061.html"
+      }
+    }
   }
 }
