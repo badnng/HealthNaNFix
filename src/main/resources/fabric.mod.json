@@ -3,11 +3,12 @@
   "id": "healthnanfix",
   "version": "${version}",
 
-  "name": "HealthNaNFix Mod",
-  "description": "HealthNaNFix Mod | Kill NaN entity",
+  "name": "HealthNaNFixReduce Mod",
+  "description": "HealthNaNFixReduce Mod | Kill NaN entity | Fix the Health Value is 'NaN' on Player's NBTData",
   "authors": [
     "MCTeamPotato",
-    "Awei"
+    "Awei",
+    "Badnng"
   ],
   "contact": {
     "homepage": "https://www.mcmod.cn/author/28061.html",
@@ -31,7 +32,7 @@
   "depends": {
     "fabricloader": ">=0.13.3",
     "fabric": "*",
-    "minecraft": "~1.18.2",
+    "minecraft": "~1.21.1",
     "java": ">=17"
   },
   "suggests": {
