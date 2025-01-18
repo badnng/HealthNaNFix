@@ -9,11 +9,16 @@ import team.teampotato.HealthNaNFix.HealthNaNFixConfig;
 public class HealthNaNFixEvent implements ModInitializer {
     @Override
     public void onInitialize() {
-        ServerEntityEvents.ENTITY_LOAD.register((entity, world) -> { //
-                getNaNEntity((LivingEntity) entity);
+        ServerEntityEvents.ENTITY_LOAD.register((entity, world) -> {
+            if (entity instanceof LivingEntity livingEntity) {
+                getNaNEntity(livingEntity);
+            } else {
+                if (HealthNaNFixConfig.debug.equals("true")) {
+                    HealthNaNFix.I.warn("[HealthNaNFix-debug] Loaded an entity that is not a LivingEntity: " + entity.getClass().getName());
+                }
+            }
         });
     }
-
     public static void getNaNEntity(LivingEntity entity){
         if (entity.getHealth() == (0.0F)) { //如果血量是0
             entity.setHealth(0.0F); //设置为0
